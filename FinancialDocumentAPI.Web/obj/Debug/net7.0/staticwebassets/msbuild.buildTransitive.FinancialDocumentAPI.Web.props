@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../buildMultiTargeting/FinancialDocumentAPI.Web.props" />
-</Project>

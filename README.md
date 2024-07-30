@@ -1,15 +1,10 @@
 # FinancialDocumentAPI
 
-## Tehnologije korišćene u projektu
+## Technologies Used in the Project
 
 - .NET 7.0
 - C#
 - Visual Studio Code
 - REST Client (za API testiranje)
 - NUnit (za unit testiranje)
-
-### Prerequisites
-
-- .NET 7.0 SDK
-- Visual Studio Code
 - MacBook mašina za buildovanje projekta

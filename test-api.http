@@ -33,7 +33,7 @@ Content-Type: application/json
 
 ### Test Retrieve Financial Document - Small Company Type
 
-POST http://localhost:5222/api/FinancialDocument/retrieve
+POST http://localhost:5000/api/FinancialDocument/retrieve
 Content-Type: application/json
 
 {

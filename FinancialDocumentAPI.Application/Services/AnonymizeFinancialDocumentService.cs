@@ -1,5 +1,6 @@
 using FinancialDocumentAPI.Shared.Dto;
 using FinancialDocumentAPI.Application.Interfaces;
+using FinancialDocumentAPI.Common.Extensions;
 
 namespace FinancialDocumentAPI.Application.Service;
 
@@ -7,12 +8,17 @@ public class AnonymizeFinancialDocumentService: IAnonymizeFinancialDocumentServi
 {
     public Task<FinancialDocumentDto> AnonymizeAsync(FinancialDocumentDto document, string productCode)
     {
-        document.AccountNumber = "d3sg4sxos23zxvhads";
+        document.AccountNumber = HashUtility.HashString(document.AccountNumber);
         foreach (var transaction in document.Transactions)
         {
-            transaction.TransactionId = "#####";
-            transaction.Description = "#####";
+            AnonymizeTransaction(transaction);
         }
         return Task.FromResult(document);
+    }
+    
+    private void AnonymizeTransaction(TransactionDto transaction)
+    {
+        transaction.TransactionId = "#####";
+        transaction.Description = "#####";
     }
 }

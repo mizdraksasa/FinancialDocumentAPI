@@ -11,7 +11,7 @@ public class ValidateRequestService : IValidateRequestService
     private readonly IProductRepository _productRepository;
     private readonly ITenantRepository _tenantRepository;
     private readonly IClientRepository _clientRepository;
-
+    
     public ValidateRequestService(IProductRepository productRepository, ITenantRepository tenantRepository, IClientRepository clientRepository)
     {
         _productRepository = productRepository;

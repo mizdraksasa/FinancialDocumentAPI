@@ -1,5 +1,7 @@
 using FinancialDocumentAPI.Shared.Dto;
 using FinancialDocumentAPI.Domain.IRepositories;
+using FinancialDocumentAPI.Domain.Entities;
+using AutoMapper;
 using System.Globalization;
 using FinancialDocumentAPI.Common.Constants;
 
@@ -7,14 +9,19 @@ namespace FinancialDocumentAPI.Infrastructure.Repositories;
 
 public class FinancialDocumentRepository : IFinancialDocumentRepository
 {
-    public Task<FinancialDocumentDto> GetFinancialDocumentAsync(Guid tenantId, Guid documentId, string productCode)
+    private readonly IMapper _mapper;
+    public FinancialDocumentRepository(IMapper mapper)
     {
-        var document = new FinancialDocumentDto
+        _mapper = mapper;
+    }
+    public async Task<FinancialDocumentDto> GetFinancialDocumentAsync(Guid tenantId, Guid documentId, string productCode)
+    {
+        var document = new FinancialDocument
         {
             AccountNumber = "95867648",
             Balance = 42331.12M,
             Currency = "EUR",
-            Transactions = new List<TransactionDto>
+            Transactions = new List<Transaction>
             {
                 new() {
                     TransactionId = "2913",
@@ -39,10 +46,9 @@ public class FinancialDocumentRepository : IFinancialDocumentRepository
                 }
             }
         };
-        
-        return Task.FromResult(document);
+        var documentDto = _mapper.Map<FinancialDocumentDto>(document);
+        return await Task.FromResult(documentDto);
     }
-
     private string FormatDate(string date)
     {
         return DateTime.ParseExact(date, Constants.DateFormat, CultureInfo.InvariantCulture).ToString(Constants.DateFormat);

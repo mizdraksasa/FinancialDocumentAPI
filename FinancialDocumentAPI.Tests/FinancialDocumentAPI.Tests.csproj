@@ -10,6 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="Moq" Version="4.16.1" />
     <PackageReference Include="NUnit" Version="3.13.3" />
@@ -24,6 +26,7 @@
     <ProjectReference Include="..\FinancialDocumentAPI.Infrastructure\FinancialDocumentAPI.Infrastructure.csproj" />
     <ProjectReference Include="..\FinancialDocumentAPI.Shared\FinancialDocumentAPI.Shared.csproj" />
     <ProjectReference Include="..\FinancialDocumentAPI.Common\FinancialDocumentAPI.Common.csproj" />
+    <ProjectReference Include="..\FinancialDocumentAPI.DependencyRegister\FinancialDocumentAPI.DependencyRegister.csproj" />
   </ItemGroup>
 
 

@@ -1,14 +1,17 @@
-using System.Globalization;
 using FinancialDocumentAPI.Application.Service;
-using FinancialDocumentAPI.Common.Constants;
 using FinancialDocumentAPI.Shared.Dto;
+using FinancialDocumentAPI.Common.Extensions;
+using FinancialDocumentAPI.Common.Constants;
+using NUnit.Framework;
+using System.Threading.Tasks;
+using System.Globalization;
 
 namespace FinancialDocumentAPI.Tests.Services;
 
 public class AnonymizeFinancialDocumentServicesTests
 {
     private AnonymizeFinancialDocumentService _useCase;
-    
+
     [SetUp]
     public void Setup()
     {
@@ -34,11 +37,12 @@ public class AnonymizeFinancialDocumentServicesTests
                 }
             }
         };
+        
         var result = await _useCase.AnonymizeAsync(document, "ProductA");
-
+        
         Assert.That(result, Is.Not.Null);
-        Assert.That(result.AccountNumber, Is.EqualTo("d3sg4sxos23zxvhads"));
-
+        Assert.That(result.AccountNumber, Is.EqualTo(HashUtility.HashString("95867648")));
+        
         foreach (var transaction in result.Transactions)
         {
             Assert.Multiple(() =>

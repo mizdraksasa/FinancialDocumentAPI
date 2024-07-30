@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinancialDocumentAPI.Application\FinancialDocumentAPI.Application.csproj" />
+    <ProjectReference Include="..\FinancialDocumentAPI.Domain\FinancialDocumentAPI.Domain.csproj" />
+    <ProjectReference Include="..\FinancialDocumentAPI.Infrastructure\FinancialDocumentAPI.Infrastructure.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+</Project>

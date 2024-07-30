@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "kjI97Ryw78/rT4U5LA4mdA5DdxFKkIKeJgFtgjTG1RuZf1cR9SkM3a6V1JeBS6vyjYV2de0I+nUMf+tr7iRRJg==",
+  "success": true,
+  "projectFilePath": "/Users/sasamizdrak/Desktop/projects/v3/FinancialDocumentAPI/FinancialDocumentAPI.DependencyRegister/FinancialDocumentAPI.DependencyRegister.csproj",
+  "expectedPackageFiles": [
+    "/Users/sasamizdrak/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/sasamizdrak/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/sasamizdrak/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

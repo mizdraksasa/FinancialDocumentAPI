@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "FinancialDocumentAPI.Domain/1.0.0": {
+        "dependencies": {
+          "FinancialDocumentAPI.Shared": "1.0.0"
+        },
+        "runtime": {
+          "FinancialDocumentAPI.Domain.dll": {}
+        }
+      },
+      "FinancialDocumentAPI.Shared/1.0.0": {
+        "runtime": {
+          "FinancialDocumentAPI.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FinancialDocumentAPI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FinancialDocumentAPI.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

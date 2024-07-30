@@ -1,0 +1,43 @@
+### Test Retrieve Financial Document - Valid Request
+
+POST http://localhost:5000/api/FinancialDocument/retrieve
+Content-Type: application/json
+
+{
+  "productCode": "ProductA",
+  "tenantId": "d3b7f82b-d6e4-4b8a-8b1c-799d6a8f76e3",
+  "documentId": "a3b5c3f2-5d34-4a75-b2d9-f8b75e6d62b5"
+}
+
+### Test Retrieve Financial Document - Invalid Product
+
+POST http://localhost:5000/api/FinancialDocument/retrieve
+Content-Type: application/json
+
+{
+  "productCode": "InvalidProduct",
+  "tenantId": "d3b7f82b-d6e4-4b8a-8b1c-799d6a8f76e3",
+  "documentId": "a3b5c3f2-5d34-4a75-b2d9-f8b75e6d62b5"
+}
+
+### Test Retrieve Financial Document - Invalid Tenant
+
+POST http://localhost:5000/api/FinancialDocument/retrieve
+Content-Type: application/json
+
+{
+  "productCode": "ProductA",
+  "tenantId": "11111111-1111-1111-1111-111111111111",
+  "documentId": "a3b5c3f2-5d34-4a75-b2d9-f8b75e6d62b5"
+}
+
+### Test Retrieve Financial Document - Small Company Type
+
+POST http://localhost:5222/api/FinancialDocument/retrieve
+Content-Type: application/json
+
+{
+  "productCode": "ProductA",
+  "tenantId": "11111111-1111-1111-1111-111111111111",
+  "documentId": "b3c5d6e2-5f67-4a89-b1c2-d3e4f5e6d7c8"
+}

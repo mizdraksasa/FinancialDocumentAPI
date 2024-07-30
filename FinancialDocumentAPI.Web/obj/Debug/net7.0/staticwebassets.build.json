@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "S4kiZZvOOXtG2VPszu9ea5n9h727GencPM9FpU0UX2Q=",
+  "Source": "FinancialDocumentAPI.Web",
+  "BasePath": "_content/FinancialDocumentAPI.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

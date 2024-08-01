@@ -37,7 +37,7 @@ public class ClientRepository : IClientRepository
         return Task.FromResult(client);
     }
 
-    public Task<bool> IsClientWhitelistedAsync(Guid tenantId, Guid clientId)
+    public Task<bool> IsClientWhitelistedAsync(Guid clientId)
     {
         var isWhitelisted = _clients.Any(c => c.ClientId == clientId);
         return Task.FromResult(_clients.Any(c => c.ClientId == clientId));

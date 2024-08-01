@@ -29,7 +29,7 @@ public class ValidateRequestService : IValidateRequestService
 
         var client = await _clientRepository.GetClientByTenantAndDocumentAsync(tenantId, documentId);
         
-        if (client == null || !await _clientRepository.IsClientWhitelistedAsync(tenantId, client.ClientId))
+        if (client == null || !await _clientRepository.IsClientWhitelistedAsync(client.ClientId))
             return CreateInvalidResult("Client not whitelisted");
 
         if (client.CompanyType == eCompanyType.Small)

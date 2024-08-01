@@ -6,5 +6,5 @@ public interface IClientRepository
 {
     Task<Client?> GetClientByTenantAndDocumentAsync(Guid tenantId, Guid documentId);
     
-    Task<bool> IsClientWhitelistedAsync(Guid tenantId, Guid clientId);
+    Task<bool> IsClientWhitelistedAsync(Guid clientId);
 }
